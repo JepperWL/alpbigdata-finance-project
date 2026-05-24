@@ -8,9 +8,10 @@ import plotly.graph_objects as go
 
 # Page Configuration
 st.set_page_config(
-    page_title="Yahoo Finance Stocks Market Dashboard",
+    page_title="Yahoo Finance Market Stock",
     page_icon="📈",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 # Custom CSS
@@ -50,8 +51,7 @@ Remove Streamlit Default
 
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
-header {visibility: hidden;}
-
+            
 /* =========================================================
 Sidebar
 ========================================================= */
@@ -317,7 +317,7 @@ negative_events = [
 ]
 
 # Realtime Loop
-while True:
+for _ in range(100000):
 
     tickers = random.sample(all_tickers, 50)
 

@@ -188,6 +188,123 @@ The following architecture illustrates the complete end-to-end data pipeline use
 
 ---
 
+# 📸 System Preview
+
+The following screenshots demonstrate the real-time functionality, distributed analytics processing, and visualization capabilities of the Yahoo Finance Market Stock platform.
+
+These screenshots provide visual evidence that the distributed big data pipeline is fully operational and capable of handling both streaming and batch analytics workloads.
+
+---
+
+# Main Dashboard Interface
+
+The main dashboard visualizes real-time stock analytics using a modern fintech-inspired interface.
+
+Features shown:
+- KPI cards
+- live market indicators
+- active stock monitoring
+- real-time financial analytics
+
+![Main Dashboard](screenshots/dashboard_title_kpi_marketticker.png)
+
+---
+
+# Market Analytics Visualization
+
+This section demonstrates advanced financial analytics generated from the streaming pipeline.
+
+Features shown:
+- Market Performance analytics
+- Top Gainers
+- Top Losers
+- real-time stock comparison
+
+![Analytics Dashboard](screenshots/analytics.png)
+
+---
+
+# Live Market Table & Market Share
+
+The system continuously updates market analytics using streaming stock events.
+
+Features shown:
+- live market table
+- distributed stock analytics
+- market share donut visualization
+
+![Market Table](screenshots/market_table.png)
+
+---
+
+# Volume Analytics & Market Heatmap
+
+The dashboard visualizes stock activity intensity using:
+- volume analytics
+- trading activity visualization
+- financial heatmaps
+- market fluctuation monitoring
+
+![Heatmap](screenshots/heatmap.png)
+
+---
+
+# Interactive Navigation Sidebar
+
+The dashboard includes an interactive sidebar navigation system that allows users to switch between:
+- Overview analytics
+- Advanced financial analytics
+- Real-time trading feed
+
+This improves dashboard usability and creates a more professional financial analytics experience.
+
+![Sidebar](screenshots/sidebar.png)
+
+---
+
+# Real-Time Trading Feed
+
+The platform continuously simulates real-time stock market activity using dynamically generated streaming events.
+
+The live feed displays:
+- bullish market activity,
+- bearish market movement,
+- trading volume updates,
+- and real-time financial alerts.
+
+This demonstrates continuous streaming visualization capabilities within the dashboard.
+
+![Live Feed](screenshots/livefeed.png)
+
+---
+
+# Kafka Producer Streaming
+
+The Kafka producer continuously streams stock market events into Apache Kafka.
+
+This demonstrates:
+- real-time event ingestion
+- streaming simulation
+- distributed messaging systems
+
+![Kafka Producer](screenshots/kafka.png)
+
+---
+
+# Spark Distributed Analytics Processing
+
+Apache Spark Structured Streaming continuously processes incoming Kafka events and performs distributed analytics computations.
+
+This demonstrates:
+- distributed stream processing
+- batch analytics
+- large-scale financial aggregation
+- streaming computation
+
+![Spark Processing](screenshots/spark.png)
+
+---
+
 # System Architecture Explanation
 
 The architecture consists of several interconnected distributed components responsible for:
