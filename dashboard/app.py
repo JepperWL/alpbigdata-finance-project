@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 
 # Page Configuration
 st.set_page_config(
-    page_title="Yahoo Stock Market Dashboard",
+    page_title="Yahoo Finance Stocks Market Dashboard",
     page_icon="📈",
     layout="wide"
 )
@@ -239,7 +239,7 @@ Scrollbar
 """, unsafe_allow_html=True)
 
 # Sidebar
-st.sidebar.title("📈 Yahoo Stock Market Dashboard")
+st.sidebar.title("📈 Yahoo Finance Stocks Market Dashboard")
 
 page = st.sidebar.radio(
     "Navigation",
@@ -248,7 +248,7 @@ page = st.sidebar.radio(
 
 # Header
 st.markdown(
-    "<div class='title'>Yahoo Stock Market Dashboard</div>",
+    "<div class='title'> Yahoo Finance Stocks Market Dashboard</div>",
     unsafe_allow_html=True
 )
 
