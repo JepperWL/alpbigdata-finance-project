@@ -27,6 +27,14 @@ st.markdown(
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@700;800&display=swap');
 
+[data-testid="stIconMaterial"] {
+        display: none !important;
+    }
+    section[data-testid="stSidebar"] {
+        transform: none !important;
+        width: 275px !important;
+    }
+
 :root {
     --bg: #050805;
     --panel: #08110C;
@@ -493,9 +501,9 @@ with st.sidebar:
         f"<div class='sidebar-logo'>Yahoo Finance<br><span>Stock Market</span></div>",
         unsafe_allow_html=True,
     )
-    st.markdown("<div class='sidebar-tagline'>FINANCIAL TERMINAL v3.0</div>", unsafe_allow_html=True)
+    st.markdown("<div class='sidebar-tagline'>FINANCIAL TERMINAL </div>", unsafe_allow_html=True)
     st.markdown(
-        f"<div class='side-chip'>Dataset locked to <b>{DATASET_PERIOD}</b></div>",
+        f"<div class='side-chip'>Batch Dataset Period locked to <b>{DATASET_PERIOD}</b></div>",
         unsafe_allow_html=True,
     )
 
@@ -572,7 +580,6 @@ st.markdown(
     </div>
     <div class="hero-metrics">
         <div class="pill"><span class="pulse-dot"></span> MARKET REPLAY  ACTIVE</div>
-        <div class="pill">BATCH PERIOD {DATASET_PERIOD}</div>
         <div class="pill">APACHE SPARK ANALYTICS</div>
         <div class="pill">HDFS READY</div>
     </div>
@@ -771,7 +778,7 @@ for _ in range(1):
         st.markdown("<br>", unsafe_allow_html=True)
 
         if page == "📊 Overview":
-            st.markdown("<div class='section-header'>📡 Realtime Streaming Data</div><div class='section-divider'></div>", unsafe_allow_html=True)
+            st.markdown("<div class='section-header'>📡 Historical Streaming Replay</div><div class='section-divider'></div>", unsafe_allow_html=True)
             col_chart, col_gl = st.columns([2, 1])
             st.success(""" 🟢 REALTIME DATA Source:
                        Kafka Producer → Kafka Topic → Spark Streaming
@@ -809,7 +816,6 @@ for _ in range(1):
 )
 
             with col_gl:
-                st.markdown("<div class='glass-panel'>", unsafe_allow_html=True)
                 st.markdown(f"<div class='section-header'>🚀 Top Gainers Dataset Period <span style='font-size:10px;color:#4D705A;font-family:JetBrains Mono'>{DATASET_PERIOD}</span></div>", unsafe_allow_html=True)
                 for _, row in gainers_df.iterrows():
                     st.markdown(
@@ -1095,9 +1101,9 @@ for _ in range(1):
                     b_df.groupby("Ticker")
                     .agg(Avg_Close=("Close", "mean"), Total_Volume=("Volume", "sum"), Avg_Change=("Change_Pct", "mean"))
                     .reset_index()
-                    .sort_values("Avg_Close", ascending=False)
+                    .sort_values("Avg_Close", ascending=False).head(rows_to_show)
                 )
-                st.markdown("<div class='section-header'>📈 Historical Avg Close Price per Emiten (Batch)</div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='section-header'>📈 Historical Avg Close Price — Top {rows_to_show} Emiten (Batch)</div>", unsafe_allow_html=True)
                 fig_hist = go.Figure(
                     go.Bar(
                         x=hist_agg["Ticker"],

@@ -196,69 +196,87 @@ These screenshots provide visual evidence that the distributed big data pipeline
 
 ---
 
-# Main Dashboard Interface
+# Dashboard Overview
 
-The main dashboard visualizes real-time stock analytics using a modern fintech-inspired interface.
+The Yahoo Finance Stock Market Dashboard serves as the central interface for monitoring historical and streaming financial analytics. The dashboard integrates KPI monitoring, market breadth analysis, top gainers and losers, and historical replay capabilities into a single fintech-inspired visualization platform.
 
-Features shown:
-- KPI cards
-- live market indicators
-- active stock monitoring
-- real-time financial analytics
+Features:
+- Market KPI Cards
+- Top Gainers & Top Losers
+- Market Breadth Analysis
+- Historical Replay Controls
+- Financial Market Monitoring
 
-![Main Dashboard](screenshots/dashboard_title_kpi_marketticker.png)
-
----
-
-# Market Analytics Visualization
-
-This section demonstrates advanced financial analytics generated from the streaming pipeline.
-
-Features shown:
-- Market Performance analytics
-- Top Gainers
-- Top Losers
-- real-time stock comparison
-
-![Analytics Dashboard](screenshots/analytics.png)
+![Dashboard Overview](screenshots/Dashboard_overview.png)
 
 ---
 
-# Live Market Table & Market Share
+# Historical Market Replay
 
-The system continuously updates market analytics using streaming stock events.
+One of the core features of the project is Historical Market Replay. Instead of replaying data through repeated refreshes, users can directly select any available trading date from the historical dataset.
 
-Features shown:
-- live market table
-- distributed stock analytics
-- market share donut visualization
+The replay engine allows users to:
 
-![Market Table](screenshots/market_table.png)
+- Select historical trading sessions
+- Navigate market conditions from different periods
+- Analyze stock behavior across time
+- Simulate historical market activity
 
----
+This feature transforms static historical records into an interactive market simulation experience.
 
-# Volume Analytics & Market Heatmap
-
-The dashboard visualizes stock activity intensity using:
-- volume analytics
-- trading activity visualization
-- financial heatmaps
-- market fluctuation monitoring
-
-![Heatmap](screenshots/heatmap.png)
+![Historical Replay](screenshots/Historical_Replay_Feature.png)
 
 ---
 
-# Interactive Navigation Sidebar
+# Live Market Feed
 
-The dashboard includes an interactive sidebar navigation system that allows users to switch between:
-- Overview analytics
-- Advanced financial analytics
-- Real-time trading feed
+The Live Market Feed page simulates a streaming stock market environment using Kafka and Spark Structured Streaming.
 
-This improves dashboard usability and creates a more professional financial analytics experience.
+Displayed information includes:
 
-![Sidebar](screenshots/sidebar.png)
+- Stock ticker updates
+- Trading volume changes
+- Price movements
+- Buy/Sell indicators
+- Streaming financial events
+
+Although generated from historical records, the feed behaves similarly to real-time financial event streams.
+
+![Live Feed](screenshots/Live_feed.png)
+
+---
+
+# Market Sentiment Heatmap
+
+The heatmap provides a visual representation of market sentiment based on stock price changes.
+
+Color Interpretation:
+
+🟢 Green = Bullish Movement
+
+🔴 Red = Bearish Movement
+
+The heatmap allows users to quickly identify sectors and companies driving market performance.
+
+![Heatmap](screenshots/Heatmap.png)
+
+---
+
+# AI Market Intelligence
+
+The platform includes a rule-based market intelligence engine capable of generating automated market insights.
+
+Generated information includes:
+
+- Market Regime Detection
+- Bullish/Bearish Assessment
+- Top Sector Identification
+- Top Gainer & Top Loser Detection
+- Market Recommendations
+
+The AI module transforms analytical results into understandable market intelligence reports.
+
+![AI Market Intelligence](screenshots/AI_Market_Intelligence.png)
 
 ---
 
@@ -278,30 +296,79 @@ This demonstrates continuous streaming visualization capabilities within the das
 
 ---
 
-# Kafka Producer Streaming
+# Financial Analytics Dashboard
 
-The Kafka producer continuously streams stock market events into Apache Kafka.
+The Analytics page provides deeper insights into historical market performance using Spark Batch Processing.
 
-This demonstrates:
-- real-time event ingestion
-- streaming simulation
-- distributed messaging systems
+Analytics include:
 
-![Kafka Producer](screenshots/kafka.png)
+- Sector Performance Analysis
+- Historical Market Trends
+- Aggregated Financial Metrics
+- Cross-sector Comparisons
+
+![Analytics](screenshots/Analytics_sector.png)
 
 ---
 
-# Spark Distributed Analytics Processing
+# Smart Watchlist
 
-Apache Spark Structured Streaming continuously processes incoming Kafka events and performs distributed analytics computations.
+The Smart Watchlist automatically identifies stocks that deserve investor attention based on:
 
-This demonstrates:
-- distributed stream processing
-- batch analytics
-- large-scale financial aggregation
-- streaming computation
+- Trading Volume
+- Price Momentum
+- Sector Strength
+- Signal Classification
 
-![Spark Processing](screenshots/spark.png)
+The watchlist helps users quickly identify promising market opportunities.
+
+![Smart Watchlist](screenshots/Smart_watchlist.png)
+
+---
+
+# Watchlist Candidate Details
+
+Each watchlist candidate is accompanied by detailed financial information including:
+
+- Sector Classification
+- Volume Analysis
+- Price Performance
+- Signal Type
+- Historical Snapshot
+
+![Watchlist Details](screenshots/Watchlist_info.png)
+
+# Kafka Event Streaming
+
+Apache Kafka acts as the messaging backbone of the system.
+
+Responsibilities:
+
+- Event ingestion
+- Stream buffering
+- Distributed message delivery
+- Producer-consumer communication
+
+The Kafka producer continuously transforms historical stock records into streaming events that are consumed by Spark Structured Streaming.
+
+![Kafka](screenshots/Kafka.png)
+
+---
+
+# Historical Batch Analytics
+
+Apache Spark Batch Processing is used to analyze over 600,000 historical stock records.
+
+The batch layer performs:
+
+- Average Price Analysis
+- Volume Aggregation
+- Historical Trend Detection
+- Long-Term Market Insights
+
+This complements the streaming layer by providing historical market intelligence.
+
+![Spark Batch Analytics](screenshots/Spark.png)
 
 ---
 
@@ -912,7 +979,11 @@ The dashboard includes:
 
 # Historical Market Replay
 
+# Historical Market Replay
+
 The latest version of the dashboard introduces a Historical Market Replay Engine.
+
+This enhancement was implemented based on project evaluation feedback.
 
 Instead of generating random stock values, the dashboard replays actual historical market records from the dataset period (2018–2023).
 
@@ -920,10 +991,12 @@ Users can:
 
 - Select a specific trading date using the Date Picker.
 - Explore market conditions for any historical trading session.
-- Run Replay Mode to simulate sequential market activity.
-- Analyze historical stock performance as if monitoring a live market environment.
+- Run Manual Replay mode.
+- Run Auto Replay mode.
+- Simulate sequential market activity using historical records.
+- Compare batch analytics and streaming analytics using the same dataset.
 
-This feature provides a more realistic simulation of financial streaming systems while preserving historical accuracy.
+This feature creates a realistic financial streaming simulation while preserving historical accuracy.
 
 ---
 
