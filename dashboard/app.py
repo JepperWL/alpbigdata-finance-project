@@ -1349,12 +1349,17 @@ for _ in range(1):
                 unsafe_allow_html=True,
             )
             feed_tickers = display_rt["Ticker"].tolist()
-            if len(feed_tickers) < 3:
+            if len(feed_tickers) == 0:
                 feed_tickers = ALL_TICKERS
 
             for i in range(min(rows_to_show, len(feed_tickers))):
                 tk = feed_tickers[i % len(feed_tickers)]
-                row = rt_df[rt_df["Ticker"] == tk].iloc[0]
+                filtered_row = rt_df[
+                rt_df["Ticker"] == tk
+                ]
+                if filtered_row.empty:
+                    continue
+                row = filtered_row.iloc[0]
                 chg = round(random.uniform(-5, 5), 2)
                 vol_f = fmt_vol(random.randint(100_000, 2_000_000))
                 price_f = round(float(row["Price"]) + random.uniform(-2, 2), 2)
