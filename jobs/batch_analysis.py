@@ -6,26 +6,26 @@ spark = SparkSession.builder \
     .appName("YahooMarketStockBatchAnalysis") \
     .getOrCreate()
 
-# Load Dataset
+# Load Dataset from HDFS
 df = spark.read.csv(
-    "/home/jovyan/work/data/stock_data.csv",
+    "hdfs://namenode:9000/stock-data/stock_data.csv",
     header=True,
     inferSchema=True
 )
 
 # Show Data
 print("\n==============================")
-print(" Stock Data Preview ")
+print(" Historical Stock Data Preview ")
 print("==============================")
 
 df.show(5)
 
-# Average Close Price 
+# Average Close Price
 print("\n==============================")
 print(" Average Close Price ")
 print("==============================")
 
-avg_close = df.groupBy("Company").agg(
+avg_close = df.groupBy("Ticker").agg(
     avg("Close").alias("Average_Close")
 )
 
@@ -39,7 +39,7 @@ print("\n==============================")
 print(" Highest Trading Volume ")
 print("==============================")
 
-volume_analysis = df.groupBy("Company").agg(
+volume_analysis = df.groupBy("Ticker").agg(
     sum("Volume").alias("Total_Volume")
 )
 
@@ -53,7 +53,7 @@ print("\n==============================")
 print(" Price Range Analysis ")
 print("==============================")
 
-price_range = df.groupBy("Company").agg(
+price_range = df.groupBy("Ticker").agg(
     max("High").alias("Highest_Price"),
     min("Low").alias("Lowest_Price")
 )

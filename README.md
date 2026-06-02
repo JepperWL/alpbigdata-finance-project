@@ -264,7 +264,7 @@ This improves dashboard usability and creates a more professional financial anal
 
 # Real-Time Trading Feed
 
-The platform continuously simulates real-time stock market activity using dynamically generated streaming events.
+The platform simulates market activity by replaying historical stock market records from the dataset period (2018–2023), creating a realistic streaming analytics experience.
 
 The live feed displays:
 - bullish market activity,
@@ -274,7 +274,7 @@ The live feed displays:
 
 This demonstrates continuous streaming visualization capabilities within the dashboard.
 
-![Live Feed](screenshots/livefeed.png)
+![Live Feed](screenshots/live_feed.png)
 
 ---
 
@@ -907,6 +907,258 @@ The dashboard includes:
 * Modern fintech-inspired UI
 * Real-time auto-refresh analytics
 * Streaming activity monitoring
+
+---
+
+# Historical Market Replay
+
+The latest version of the dashboard introduces a Historical Market Replay Engine.
+
+Instead of generating random stock values, the dashboard replays actual historical market records from the dataset period (2018–2023).
+
+Users can:
+
+- Select a specific trading date using the Date Picker.
+- Explore market conditions for any historical trading session.
+- Run Replay Mode to simulate sequential market activity.
+- Analyze historical stock performance as if monitoring a live market environment.
+
+This feature provides a more realistic simulation of financial streaming systems while preserving historical accuracy.
+
+---
+
+# Advanced Analytics Features
+
+The latest version of the Yahoo Market Stock dashboard introduces advanced financial analytics modules designed to provide deeper market intelligence and improve decision-support capabilities.
+
+---
+
+# HDFS Integration
+
+The historical stock dataset is positioned as the storage layer within the big data architecture.
+
+In a production-scale environment, historical stock market data would be stored in Hadoop Distributed File System (HDFS) before being processed by Apache Spark.
+
+Within this project, the historical dataset is represented using a CSV dataset that simulates the role of HDFS storage.
+
+Pipeline Flow:
+
+Historical Dataset
+      ↓
+     HDFS
+      ↓
+Apache Spark Batch Analytics
+      ↓
+Dashboard Visualization
+
+This architecture demonstrates how distributed storage systems can be integrated with distributed analytics engines to support large-scale financial data processing.
+
+---
+
+# Batch vs Streaming Analytics
+
+The project combines both batch analytics and streaming analytics to demonstrate modern financial data processing architectures.
+
+| Component | Batch Analytics | Streaming Analytics |
+|------------|------------|------------|
+| Data Source | Historical CSV Dataset | Kafka Event Stream |
+| Processing Engine | Apache Spark Batch Processing | Spark Structured Streaming |
+| Purpose | Historical Market Analysis | Real-Time Market Monitoring |
+| Output | Historical Insights | Live Market Analytics |
+| Dashboard Section | Analytics | Live Feed |
+| Processing Type | Large Dataset Processing | Continuous Event Processing |
+
+Batch processing is used to generate historical financial intelligence, while streaming analytics provides continuous market monitoring through simulated real-time stock events.
+
+---
+
+# Dataset Coverage
+
+The historical dataset used in this project contains stock market trading records covering a five-year period.
+
+| Attribute | Value |
+|------------|------------|
+| Dataset Period | 2018-11-29 to 2023-11-29 |
+| Domain | Financial Market Analytics |
+| Coverage | Historical Stock Trading Records |
+| Companies | Multiple Publicly Traded Companies |
+| Usage | Batch Analytics, Streaming Simulation, Dashboard Visualization |
+
+The historical dataset serves two purposes:
+
+1. Batch analytics using Apache Spark.
+2. Historical Market Replay used by the dashboard to simulate streaming market activity.
+
+This allows users to explore historical trading sessions while preserving the concept of real-time analytics.
+
+---
+
+# Dashboard Pages
+
+## 📊 Overview
+
+Features:
+
+## 📊 Overview
+
+Features:
+
+- Market KPI Cards
+- Market Breadth Analysis
+- Top Gainer Monitoring
+- Top Loser Monitoring
+- Realtime Market Overview
+- Historical Market Replay
+- Trading Date Selector
+- Replay Mode
+- HDFS & Kafka Status Indicators
+
+---
+
+## 📈 Analytics
+
+Features:
+
+- Historical Average Closing Price Analysis
+- Sector Performance Analytics
+- Top Performing Sector Ranking
+- Signal Distribution Analysis
+- Company Detail Analysis
+- Market Sentiment Heatmap
+- AI Market Intelligence Report
+
+---
+
+## ⚡ Live Feed
+
+Features:
+
+- Real-Time Trading Feed
+- Streaming Activity Monitoring
+- Kafka Streaming Simulation
+
+---
+
+## ⭐ Smart Watchlist
+
+Features:
+
+- Momentum-Based Stock Ranking
+- Trading Signal Classification
+- Strong Buy Detection
+- Watchlist Analytics
+- Candidate Stock Monitoring
+
+---
+
+# AI Market Intelligence
+
+The dashboard includes an AI-inspired market intelligence module designed to automatically summarize current market conditions.
+
+The module analyzes:
+
+- Bullish vs Bearish Stock Distribution
+- Market Breadth
+- Sector Performance
+- Top Gainers
+- Top Losers
+- Trading Signal Distribution
+
+Outputs generated include:
+
+- Market Sentiment Evaluation
+- Market Score Calculation
+- Sector Leadership Detection
+- Momentum Analysis
+- Trading Recommendations
+- Market Risk Indicators
+
+---
+
+# Smart Watchlist System
+
+The Smart Watchlist module automatically identifies stocks with the strongest market momentum.
+
+The ranking mechanism considers:
+
+- Percentage Price Change
+- Trading Volume
+- Signal Classification
+- Market Momentum
+
+Stocks are categorized into:
+
+- STRONG BUY
+- WATCH
+- RISK OFF
+
+---
+
+# Market Sentiment Heatmap
+
+The dashboard includes an interactive market sentiment heatmap designed to provide rapid visualization of market conditions.
+
+Color Interpretation:
+
+- 🟢 Green = Positive Price Movement
+- 🔴 Red = Negative Price Movement
+
+The heatmap enables users to quickly identify:
+
+- Bullish Stocks
+- Bearish Stocks
+- Market Distribution
+- Sector Momentum
+
+---
+
+# System Contributions
+
+Major contributions include:
+
+- Distributed Financial Analytics Processing
+- Apache Kafka Event Streaming
+- Apache Spark Structured Streaming
+- Historical Batch Analytics
+- Interactive Financial Dashboard Development
+- Real-Time Market Monitoring
+- AI-Inspired Market Intelligence
+- Smart Watchlist Generation
+- Financial Data Visualization
+
+---
+
+# Project Highlights
+
+✔ Apache Kafka Streaming Pipeline
+
+✔ Apache Spark Structured Streaming
+
+✔ Historical Batch Analytics
+
+✔ Financial Market Intelligence Dashboard
+
+✔ Interactive Stock Monitoring
+
+✔ Smart Watchlist Recommendation System
+
+✔ Sector Performance Analytics
+
+✔ Market Sentiment Heatmap
+
+✔ AI Market Intelligence Report
+
+✔ Dockerized Big Data Architecture
+
+✔ HDFS-Oriented Data Pipeline Design
+
+✔ Streamlit Interactive Visualization
+
+✔ Historical Market Replay Engine
+
+✔ Interactive Trading Date Selection
+
+✔ Replay-Based Streaming Simulation
 
 ---
 

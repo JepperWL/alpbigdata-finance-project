@@ -17,7 +17,7 @@ print("Starting Kafka Producer...")
 df = pd.read_csv("../data/stock_data.csv")
 
 # Send first 100 rows
-for index, row in df.head(100).iterrows():
+for index, row in df.sample(100).iterrows():
 
     message = {
         "Date": str(row.get("Date", "")),
