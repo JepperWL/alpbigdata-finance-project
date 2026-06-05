@@ -333,7 +333,7 @@ Responsibilities:
 
 The Kafka producer continuously transforms historical stock records into streaming events that are consumed by Spark Structured Streaming.
 
-![Kafka](screenshots/Kafka.png)
+![Kafka](screenshots/kafka.png)
 
 ---
 
@@ -350,7 +350,7 @@ The batch layer performs:
 
 This complements the streaming layer by providing historical market intelligence.
 
-![Spark Batch Analytics](screenshots/Spark.png)
+![Spark Batch Analytics](screenshots/spark.png)
 
 ---
 
