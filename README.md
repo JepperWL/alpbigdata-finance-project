@@ -228,24 +228,6 @@ This feature transforms static historical records into an interactive market sim
 
 ---
 
-# Live Market Feed
-
-The Live Market Feed page simulates a streaming stock market environment using Kafka and Spark Structured Streaming.
-
-Displayed information includes:
-
-- Stock ticker updates
-- Trading volume changes
-- Price movements
-- Buy/Sell indicators
-- Streaming financial events
-
-Although generated from historical records, the feed behaves similarly to real-time financial event streams.
-
-![Live Feed](screenshots/Live_feed.png)
-
----
-
 # Market Sentiment Heatmap
 
 The heatmap provides a visual representation of market sentiment based on stock price changes.
@@ -258,7 +240,7 @@ Color Interpretation:
 
 The heatmap allows users to quickly identify sectors and companies driving market performance.
 
-![Heatmap](screenshots/Heatmap.png)
+![Heatmap](screenshots/heatmap.png)
 
 ---
 
@@ -1067,10 +1049,6 @@ This allows users to explore historical trading sessions while preserving the co
 ---
 
 # Dashboard Pages
-
-## 📊 Overview
-
-Features:
 
 ## 📊 Overview
 

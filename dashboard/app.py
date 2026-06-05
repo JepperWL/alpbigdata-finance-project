@@ -8,7 +8,6 @@ import plotly.express as px
 import time
 from datetime import datetime, timedelta
 
-
 # Page Congiguration
 APP_TITLE = "Yahoo Finance Stock Market"
 DATASET_PERIOD = "2018-2023"
