@@ -188,6 +188,27 @@ The following architecture illustrates the complete end-to-end data pipeline use
 
 ---
 
+# 🎥 Video Demonstration
+
+A complete demonstration of the Yahoo Finance Market Stock platform is available through the video below.
+
+The demonstration showcases:
+
+- Dashboard Overview
+- Historical Market Replay
+- Apache Kafka Streaming Simulation
+- Apache Spark Analytics
+- AI Market Intelligence
+- Smart Watchlist
+- Market Sentiment Heatmap
+- Live Trading Feed
+
+[![Watch Demo](screenshots/Dashboard_overview.png)](https://youtu.be/enK7a7gSMfk)
+
+Click the image above to watch the full project demonstration video.
+
+---
+
 # 📸 System Preview
 
 The following screenshots demonstrate the real-time functionality, distributed analytics processing, and visualization capabilities of the Yahoo Finance Market Stock platform.
@@ -806,7 +827,7 @@ The design was inspired by modern:
 ## Step 1 — Clone Repository
 
 ```bash id="abpjxv"
-git clone <repository-url>
+git clone https://github.com/JepperWL/alpbigdata-finance-project.git
 cd alpbigdata-finance-project
 ```
 
@@ -1048,6 +1069,21 @@ This allows users to explore historical trading sessions while preserving the co
 
 ---
 
+# Dataset Statistics
+
+| Metric | Value |
+|----------|----------|
+| Historical Records | 600,000+ |
+| Dataset Period | 5 Years |
+| Processing Framework | Apache Spark |
+| Streaming Platform | Apache Kafka |
+| Visualization Layer | Streamlit |
+| Storage Simulation | HDFS-Oriented Architecture |
+
+These statistics demonstrate the scale of data processed within the financial analytics pipeline.
+
+---
+
 # Dashboard Pages
 
 ## 📊 Overview
@@ -1106,42 +1142,30 @@ Features:
 
 The dashboard includes an AI-inspired market intelligence module designed to automatically summarize current market conditions.
 
-The module analyzes:
+Key outputs include:
 
-- Bullish vs Bearish Stock Distribution
-- Market Breadth
-- Sector Performance
-- Top Gainers
-- Top Losers
-- Trading Signal Distribution
-
-Outputs generated include:
-
-- Market Sentiment Evaluation
-- Market Score Calculation
+- Market Sentiment Score
+- Bullish vs Bearish Distribution
 - Sector Leadership Detection
 - Momentum Analysis
-- Trading Recommendations
-- Market Risk Indicators
+- Trading Signal Evaluation
+
+The module transforms raw market metrics into concise decision-support insights for investors and analysts.
 
 ---
 
 # Smart Watchlist System
 
-The Smart Watchlist module automatically identifies stocks with the strongest market momentum.
+The Smart Watchlist automatically ranks stocks based on momentum indicators and recent market performance.
 
-The ranking mechanism considers:
+Evaluation factors include:
 
-- Percentage Price Change
+- Price Change Percentage
 - Trading Volume
-- Signal Classification
 - Market Momentum
+- Signal Classification
 
-Stocks are categorized into:
-
-- STRONG BUY
-- WATCH
-- RISK OFF
+The module helps users identify high-potential stocks and monitor market opportunities more efficiently.
 
 ---
 
@@ -1161,21 +1185,7 @@ The heatmap enables users to quickly identify:
 - Market Distribution
 - Sector Momentum
 
----
-
-# System Contributions
-
-Major contributions include:
-
-- Distributed Financial Analytics Processing
-- Apache Kafka Event Streaming
-- Apache Spark Structured Streaming
-- Historical Batch Analytics
-- Interactive Financial Dashboard Development
-- Real-Time Market Monitoring
-- AI-Inspired Market Intelligence
-- Smart Watchlist Generation
-- Financial Data Visualization
+The visualization enables rapid identification of market leaders, laggards, and overall sentiment distribution.
 
 ---
 
@@ -1271,27 +1281,6 @@ These challenges provided valuable practical experience in:
 
 ---
 
-# Learning Outcomes
-
-Through this project, several important technical concepts were implemented and learned.
-
-## Technical Skills Acquired
-
-* Apache Kafka event streaming
-* Spark Structured Streaming
-* Distributed analytics processing
-* Docker container orchestration
-* Financial dashboard development
-* Big data pipeline architecture
-* Real-time event handling
-* Stream processing systems
-* Financial analytics visualization
-* Distributed systems debugging
-
-The project provided practical experience similar to real-world financial data engineering systems.
-
----
-
 # System Limitations
 
 Although the system successfully demonstrates a complete big data workflow, several limitations remain.
@@ -1324,6 +1313,21 @@ Several improvements could enhance the system further.
 * Real-time notification systems
 * Persistent historical storage
 * User authentication system
+
+---
+
+# Project Impact
+
+This project demonstrates how modern big data technologies can be integrated to build an end-to-end financial analytics platform.
+
+The system combines:
+
+- Distributed Data Processing
+- Real-Time Event Streaming
+- Historical Batch Analytics
+- Interactive Data Visualization
+
+Through the integration of Apache Kafka, Apache Spark, Docker, and Streamlit, the platform showcases practical implementations commonly found in real-world financial analytics environments.
 
 ---
 
